@@ -124,6 +124,8 @@
 
 
     <script>
+        const apiUrl = 'https://subhajitmukherjee08.pythonanywhere.com/crop_recommendation_system/predict';
+        
         document.getElementById('cropForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
     
@@ -131,8 +133,16 @@
             var formData = new FormData(this);
     
             //Send form data to the server (for localhost)
-            fetch('/predict', {
+            // fetch('/predict', {
+            //     method: 'POST',
+            //     body: formData
+            // })
+
+            fetch(apiUrl, {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
                 body: formData
             })
 
