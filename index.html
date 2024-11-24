@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop Recommendation System</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
 
     <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -28,7 +28,7 @@
             </div>
 
             <div class="read-report">
-                <button class="report-button" onclick="window.open('{{ url_for('static', filename='B2330052_subhajit_mukherjee_harvestifier.pdf') }}', '_blank')">Read Report</button>
+                <button class="report-button" onclick="window.open('static/B2330052_subhajit_mukherjee_harvestifier.pdf', '_blank')">Read Report</button>
             </div>
             
         </div>
@@ -155,28 +155,28 @@
                 // Change background image based on the predicted crop name
                 var cropName = result.crop.toLowerCase();
                 var backgroundMap = {
-                    "rice": "{{ url_for('static', filename='Crop_images/rice.jpg') }}",
-                    "maize": "{{ url_for('static', filename='Crop_images/maize.jpg') }}",
-                    "jute": "{{ url_for('static', filename='Crop_images/jute.jpg') }}",
-                    "cotton": "{{ url_for('static', filename='Crop_images/cotton.jpg') }}",
-                    "coconut": "{{ url_for('static', filename='Crop_images/coconut.jpg') }}",
-                    "papaya": "{{ url_for('static', filename='Crop_images/papaya.jpg') }}",
-                    "orange": "{{ url_for('static', filename='Crop_images/orange.jpg') }}",
-                    "apple": "{{ url_for('static', filename='Crop_images/apple.jpg') }}",
-                    "muskmelon": "{{ url_for('static', filename='Crop_images/muskmelon.jpg') }}",
-                    "watermelon": "{{ url_for('static', filename='Crop_images/watermelon.jpg') }}",
-                    "grapes": "{{ url_for('static', filename='Crop_images/grapes.jpg') }}",
-                    "mango": "{{ url_for('static', filename='Crop_images/mango.jpg') }}",
-                    "banana": "{{ url_for('static', filename='Crop_images/banana.jpg') }}",
-                    "pomegranate": "{{ url_for('static', filename='Crop_images/pomegranate.jpg') }}",
-                    "lentil": "{{ url_for('static', filename='Crop_images/lentil.jpg') }}",
-                    "blackgram": "{{ url_for('static', filename='Crop_images/blackgram.jpg') }}",
-                    "mungbean": "{{ url_for('static', filename='Crop_images/mungbean.jpg') }}",
-                    "mothbeans": "{{ url_for('static', filename='Crop_images/mothbeans.jpg') }}",
-                    "pigeonpeas": "{{ url_for('static', filename='Crop_images/pigeonpeas.jpg') }}",
-                    "kidneybeans": "{{ url_for('static', filename='Crop_images/kidneybeans.jpg') }}",
-                    "chickpea": "{{ url_for('static', filename='Crop_images/chickpea.jpg') }}",
-                    "coffee": "{{ url_for('static', filename='Crop_images/coffee.jpg') }}"
+                    "rice": "static/Crop_images/rice.jpg",
+                    "maize": "static/Crop_images/maize.jpg",
+                    "jute": "static/Crop_images/jute.jpg",
+                    "cotton": "static/Crop_images/cotton.jpg",
+                    "coconut": "static/Crop_images/coconut.jpg",
+                    "papaya": "static/Crop_images/papaya.jpg",
+                    "orange": "static/Crop_images/orange.jpg",
+                    "apple": "static/Crop_images/apple.jpg",
+                    "muskmelon": "static/Crop_images/muskmelon.jpg",
+                    "watermelon": "static/Crop_images/watermelon.jpg",
+                    "grapes": "static/Crop_images/grapes.jpg",
+                    "mango": "static/Crop_images/mango.jpg",
+                    "banana": "static/Crop_images/banana.jpg",
+                    "pomegranate": "static/Crop_images/pomegranate.jpg",
+                    "lentil": "static/Crop_images/lentil.jpg",
+                    "blackgram": "static/Crop_images/blackgram.jpg",
+                    "mungbean": "static/Crop_images/mungbean.jpg",
+                    "mothbeans": "static/Crop_images/mothbeans.jpg",
+                    "pigeonpeas": "static/Crop_images/pigeonpeas.jpg",
+                    "kidneybeans": "static/Crop_images/kidneybeans.jpg",
+                    "chickpea": "static/Crop_images/chickpea.jpg",
+                    "coffee": "static/Crop_images/coffee.jpg"
                 };
                 var backgroundImage = backgroundMap[cropName];
                 if (backgroundImage) {
